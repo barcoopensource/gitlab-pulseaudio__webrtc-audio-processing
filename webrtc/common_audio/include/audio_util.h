@@ -63,7 +63,7 @@ void FloatToS16(const float* src, size_t size, int16_t* dest);
 void S16ToFloat(const int16_t* src, size_t size, float* dest);
 void FloatS16ToS16(const float* src, size_t size, int16_t* dest);
 void FloatToFloatS16(const float* src, size_t size, float* dest);
-void FloatS16ToFloat(const float* src, size_t size, float* dest);
+void FloatS16ToFloat(const float* src, size_t size, float* dest, bool removeNans = false);
 
 // Copy audio from |src| channels to |dest| channels unless |src| and |dest|
 // point to the same address. |src| and |dest| must have the same number of

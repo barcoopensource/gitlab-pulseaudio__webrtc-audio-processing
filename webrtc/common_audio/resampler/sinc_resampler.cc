@@ -83,7 +83,7 @@
 // |virtual_source_idx_|, etc.
 
 // MSVC++ requires this to be set before any other includes to get M_PI.
-#define _USE_MATH_DEFINES
+// #define _USE_MATH_DEFINES
 
 #include "webrtc/common_audio/resampler/sinc_resampler.h"
 

@@ -34,9 +34,15 @@ void FloatToFloatS16(const float* src, size_t size, float* dest) {
     dest[i] = FloatToFloatS16(src[i]);
 }
 
-void FloatS16ToFloat(const float* src, size_t size, float* dest) {
+void FloatS16ToFloat(const float* src, size_t size, float* dest,bool removeNans) {
   for (size_t i = 0; i < size; ++i)
+  {
     dest[i] = FloatS16ToFloat(src[i]);
+    if (removeNans && std::isnan(dest[i]))
+    {
+      dest[i] = 0.f;
+    }
+  }
 }
 
 template <>
