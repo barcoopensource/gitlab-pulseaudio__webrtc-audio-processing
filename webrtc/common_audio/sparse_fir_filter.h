@@ -20,7 +20,7 @@ namespace webrtc {
 
 // A Finite Impulse Response filter implementation which takes advantage of a
 // sparse structure with uniformly distributed non-zero coefficients.
-class SparseFIRFilter final {
+class SparseFIRFilter {
  public:
   // |num_nonzero_coeffs| is the number of non-zero coefficients,
   // |nonzero_coeffs|. They are assumed to be uniformly distributed every

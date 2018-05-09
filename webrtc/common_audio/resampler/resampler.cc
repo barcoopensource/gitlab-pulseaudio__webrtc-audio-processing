@@ -40,7 +40,21 @@ Resampler::Resampler()
 }
 
 Resampler::Resampler(int inFreq, int outFreq, int num_channels)
-    : Resampler() {
+    : state1_(nullptr),
+      state2_(nullptr),
+      state3_(nullptr),
+      in_buffer_(nullptr),
+      out_buffer_(nullptr),
+      in_buffer_size_(0),
+      out_buffer_size_(0),
+      in_buffer_size_max_(0),
+      out_buffer_size_max_(0),
+      my_in_frequency_khz_(0),
+      my_out_frequency_khz_(0),
+      my_mode_(kResamplerMode1To1),
+      num_channels_(0),
+      slave_left_(nullptr),
+      slave_right_(nullptr) {
   Reset(inFreq, outFreq, num_channels);
 }
 

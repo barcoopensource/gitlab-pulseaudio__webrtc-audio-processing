@@ -32,7 +32,7 @@ namespace webrtc {
 // This filter bank does not satisfy perfect reconstruction. The SNR after
 // analysis and synthesis (with no processing in between) is approximately 9.5dB
 // depending on the input signal after compensating for the delay.
-class ThreeBandFilterBank final {
+class ThreeBandFilterBank {
  public:
   explicit ThreeBandFilterBank(size_t length);
 

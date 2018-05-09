@@ -1,4 +1,4 @@
-/*
+﻿/*
  *  Copyright (c) 2013 The WebRTC project authors. All Rights Reserved.
  *
  *  Use of this source code is governed by a BSD-style license
@@ -83,7 +83,7 @@
 // |virtual_source_idx_|, etc.
 
 // MSVC++ requires this to be set before any other includes to get M_PI.
-// #define _USE_MATH_DEFINES
+//#define _USE_MATH_DEFINES
 
 #include "webrtc/common_audio/resampler/sinc_resampler.h"
 
@@ -119,7 +119,7 @@ double SincScaleFactor(double io_ratio) {
 }  // namespace
 
 // If we know the minimum architecture at compile time, avoid CPU detection.
-#if defined(WEBRTC_ARCH_X86_FAMILY)
+#if defined(WEBRTC_ARCH_X86_FAMILY) && (_MSC_VER)
 #if defined(__SSE2__)
 #define CONVOLVE_FUNC Convolve_SSE
 void SincResampler::InitializeCPUSpecificFeatures() {}

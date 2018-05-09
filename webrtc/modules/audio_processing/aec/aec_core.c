@@ -1,4 +1,4 @@
-/*
+﻿/*
  *  Copyright (c) 2012 The WebRTC project authors. All Rights Reserved.
  *
  *  Use of this source code is governed by a BSD-style license
@@ -1478,7 +1478,7 @@ AecCore* WebRtcAec_CreateAec() {
   WebRtcAec_ComfortNoise = ComfortNoise;
   WebRtcAec_SubbandCoherence = SubbandCoherence;
 
-#if defined(WEBRTC_ARCH_X86_FAMILY)
+#if defined(WEBRTC_ARCH_X86_FAMILY) && defined(__SSE2__)
   if (WebRtc_GetCPUInfo(kSSE2)) {
     WebRtcAec_InitAec_SSE2();
   }

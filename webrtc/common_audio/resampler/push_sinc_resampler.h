@@ -28,7 +28,7 @@ class PushSincResampler : public SincResamplerCallback {
   // must correspond to the same time duration (typically 10 ms) as the sample
   // ratio is inferred from them.
   PushSincResampler(size_t source_frames, size_t destination_frames);
-  ~PushSincResampler() override;
+  ~PushSincResampler();
 
   // Perform the resampling. |source_frames| must always equal the
   // |source_frames| provided at construction. |destination_capacity| must be
@@ -50,7 +50,7 @@ class PushSincResampler : public SincResamplerCallback {
 
  protected:
   // Implements SincResamplerCallback.
-  void Run(size_t frames, float* destination) override;
+  void Run(size_t frames, float* destination);
 
  private:
   friend class PushSincResamplerTest;
