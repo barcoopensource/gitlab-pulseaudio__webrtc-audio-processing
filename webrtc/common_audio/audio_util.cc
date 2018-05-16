@@ -12,6 +12,8 @@
 
 #include "webrtc/typedefs.h"
 
+#include <cmath>
+
 namespace webrtc {
 
 void FloatToS16(const float* src, size_t size, int16_t* dest) {
